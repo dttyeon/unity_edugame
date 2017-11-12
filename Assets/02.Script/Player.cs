@@ -14,11 +14,10 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        moveControl(k);
-        k = true;
+        MoveControl(k);
 	}
 
-    void moveControl(bool a)
+    void MoveControl(bool a)
     {
 
         if (a == true)
@@ -30,15 +29,12 @@ public class Player : MonoBehaviour {
          }
     }
 
-    public void TurnTheBall(int type)
+    public void StopTheBall()
     {
-        if (type == 1)
-        {
-            k = false;   
-        }
-        else if(type==2)
-        {
-            k = false;
-        }
+        k = false;
+    }
+    public void MoveTheBall()
+    {
+        k = true;
     }
 }

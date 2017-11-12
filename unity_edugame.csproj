@@ -90,6 +90,7 @@
     <Compile Include="Assets\02.Script\ItemInfo.cs" />
     <Compile Include="Assets\02.Script\MoveSample.cs" />
     <Compile Include="Assets\02.Script\Player.cs" />
+    <Compile Include="Assets\02.Script\Quiz.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />

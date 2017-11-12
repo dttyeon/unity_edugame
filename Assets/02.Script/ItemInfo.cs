@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ItemInfo : MonoBehaviour {
 
     private CheckItem checkitem;
+    private Quiz quiz;
 
-    private void Start()
+    void Start()
     {
         checkitem = GameObject.Find("GameUI").GetComponent<CheckItem>();
-
+        quiz = GameObject.Find("GameUI").GetComponent<Quiz>();
     }
 
 
@@ -20,6 +20,7 @@ public class ItemInfo : MonoBehaviour {
         {
             gameObject.SetActive(false);
             checkitem.DisItem();
+            quiz.VisibleQuiz();
         }
     }
 }
