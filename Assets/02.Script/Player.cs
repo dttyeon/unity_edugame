@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public float moveSpeed = 5.0f;
+    bool k = true;
 
 	// Use this for initialization
 	void Start () {
@@ -13,16 +14,31 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        moveControl();
+        moveControl(k);
+        k = true;
 	}
 
-    void moveControl() {
+    void moveControl(bool a)
+    {
 
-        float distanceX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        float distanceY = Input.GetAxis("Vertical")*moveSpeed * Time.deltaTime;
-        this.gameObject.transform.Translate(distanceX, distanceY, 0);
-        
-   
+        if (a == true)
+        { 
+         float distanceX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+         float distanceY = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+         this.gameObject.transform.Translate(distanceX, distanceY, 0);
 
+         }
+    }
+
+    public void TurnTheBall(int type)
+    {
+        if (type == 1)
+        {
+            k = false;   
+        }
+        else if(type==2)
+        {
+            k = false;
+        }
     }
 }
