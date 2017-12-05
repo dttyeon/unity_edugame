@@ -84,13 +84,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\02.Script\CameraCtrl.cs" />
-    <Compile Include="Assets\02.Script\CheckItem.cs" />
-    <Compile Include="Assets\02.Script\EnemyInfo.cs" />
-    <Compile Include="Assets\02.Script\ItemInfo.cs" />
-    <Compile Include="Assets\02.Script\MoveSample.cs" />
-    <Compile Include="Assets\02.Script\Player.cs" />
-    <Compile Include="Assets\02.Script\Quiz.cs" />
+    <Compile Include="Assets\Script\Boss.cs" />
+    <Compile Include="Assets\Script\Boss2.cs" />
+    <Compile Include="Assets\Script\CameraCtrl.cs" />
+    <Compile Include="Assets\Script\CheckItem.cs" />
+    <Compile Include="Assets\Script\CheckItem2.cs" />
+    <Compile Include="Assets\Script\EnemyInfo.cs" />
+    <Compile Include="Assets\Script\EnemyMove.cs" />
+    <Compile Include="Assets\Script\Enemy_BattleMode.cs" />
+    <Compile Include="Assets\Script\Explosion.cs" />
+    <Compile Include="Assets\Script\GotoSelect.cs" />
+    <Compile Include="Assets\Script\ItemInfo.cs" />
+    <Compile Include="Assets\Script\MoveSample.cs" />
+    <Compile Include="Assets\Script\Player.cs" />
+    <Compile Include="Assets\Script\Player2.cs" />
+    <Compile Include="Assets\Script\Player_Battle.cs" />
+    <Compile Include="Assets\Script\Player_laser.cs" />
+    <Compile Include="Assets\Script\Quiz.cs" />
+    <Compile Include="Assets\Script\Quiz2.cs" />
+    <Compile Include="Assets\Script\SoundManager.cs" />
+    <Compile Include="Assets\Script\SpawnManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
