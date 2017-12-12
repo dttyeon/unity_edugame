@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     private Quiz quiz;
     private SpriteRenderer spriterenderder;
     int whatbtn = 0;
-//    SerialPort sp = new SerialPort("COM7", 9600);
+    Animator anim;
+    //    SerialPort sp = new SerialPort("COM7", 9600);
     float v = 0, h = 0;
 
 
@@ -19,16 +20,30 @@ public class Player : MonoBehaviour
     {
         quiz = GameObject.Find("GameUI").GetComponent<Quiz>();
         spriterenderder = gameObject.GetComponent<SpriteRenderer>();
-
+        anim = gameObject.GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveControl();
+     //   PlayAni(false);
     //    whatbtn = quiz.GetpushBtn();
     }
+    /*
+    public void PlayAni(bool pCatch)
+    {
+        if (pCatch)
+        {
+            anim.SetBool("pbreak", true);
 
+        }
+        else
+        {
+            anim.SetBool("pbreak", false);
+        }
+    }
+*/
     void MoveControl()
     {
         if (quiz.StopTheGame())

@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Quiz2 : MonoBehaviour
 {
-
+    Well well;
+    Fire fire;
+    Spike spike;
     private bool q=false, stopgame=true;
     private int quizNum = 0;
     private int score = 0;
@@ -14,6 +16,9 @@ public class Quiz2 : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        well = GameObject.Find("dudu").GetComponent<Well>();
+        fire = GameObject.Find("new fire").GetComponent<Fire>();
+        spike = GameObject.Find("spike").GetComponent<Spike>();
     }
 	
 	// Update is called once per frame
@@ -22,15 +27,20 @@ public class Quiz2 : MonoBehaviour
        
 	}
 
-    public void VisibleQuiz()
+    public void VisibleQuiz(int a)
     {
         q = true;
-        quizNum++;
+        quizNum=a;
     }
 
     public bool StopTheGame()
     {
         return stopgame;
+    }
+
+    public int WhatScore()
+    {
+        return score;
     }
 
     public void OnGUI()
@@ -47,12 +57,14 @@ public class Quiz2 : MonoBehaviour
                     q = false;
                     score -= 50;
                     stopgame = true;
+                    well.GetWellCatch(2);
                 }
                 else if (Input.GetKeyDown(KeyCode.B))
                 {
                     q = false;
                     score += 100;
                     stopgame = true;
+                    well.GetWellCatch(1);
                 }
             }
             else if (quizNum == 2)
@@ -64,12 +76,14 @@ public class Quiz2 : MonoBehaviour
                     q = false;
                     score += 100;
                     stopgame = true;
+                    fire.GetFireCatch(1);
                 }
                 else if (Input.GetKeyDown(KeyCode.B))
                 {
                     q = false;
                     score -= 50;
                     stopgame = true;
+                    fire.GetFireCatch(2);
                 }
             }
             else if (quizNum == 3)
@@ -81,12 +95,14 @@ public class Quiz2 : MonoBehaviour
                     q = false;
                     score -= 50;
                     stopgame = true;
+                    spike.GetSpikeCatch(2);
                 }
                 else if (Input.GetKeyDown(KeyCode.B))
                 {
                     q = false;
                     score += 100;
                     stopgame = true;
+                    spike.GetSpikeCatch(1);
                 }
             }
             scoretxt.text =  "score <color=#ffff00>"+score.ToString()+"</color>";

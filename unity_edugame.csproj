@@ -89,10 +89,13 @@
     <Compile Include="Assets\Script\CameraCtrl.cs" />
     <Compile Include="Assets\Script\CheckItem.cs" />
     <Compile Include="Assets\Script\CheckItem2.cs" />
+    <Compile Include="Assets\Script\Door.cs" />
+    <Compile Include="Assets\Script\Door2.cs" />
     <Compile Include="Assets\Script\EnemyInfo.cs" />
     <Compile Include="Assets\Script\EnemyMove.cs" />
     <Compile Include="Assets\Script\Enemy_BattleMode.cs" />
     <Compile Include="Assets\Script\Explosion.cs" />
+    <Compile Include="Assets\Script\Fire.cs" />
     <Compile Include="Assets\Script\GotoSelect.cs" />
     <Compile Include="Assets\Script\ItemInfo.cs" />
     <Compile Include="Assets\Script\MoveSample.cs" />
@@ -104,6 +107,8 @@
     <Compile Include="Assets\Script\Quiz2.cs" />
     <Compile Include="Assets\Script\SoundManager.cs" />
     <Compile Include="Assets\Script\SpawnManager.cs" />
+    <Compile Include="Assets\Script\Spike.cs" />
+    <Compile Include="Assets\Script\Well.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />

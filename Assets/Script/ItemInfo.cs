@@ -24,13 +24,13 @@ public class ItemInfo : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            quiz.VisibleQuiz();
+    //        quiz.VisibleQuiz();
             checkitem.DisItem();
         }
         else if (col.CompareTag("Player2"))
         {
             gameObject.SetActive(false);
-            quiz2.VisibleQuiz();
+          //  quiz2.VisibleQuiz();
             checkitem2.DisItem();
         }
     }

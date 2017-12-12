@@ -19,11 +19,16 @@ public class CheckItem : MonoBehaviour
     }
     private void Update()
     {
+        /*
         if (itemNum == 0&&quiz.StopTheGame())
         {
             SceneManager.LoadScene("ClearScene");
         }
+        */
     }
+
+    public int ItemNumers()
+    { return itemNum; }
 
     public void DisItem()
     {
